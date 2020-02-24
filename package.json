@@ -12,7 +12,7 @@
     "react-full-page": "^0.1.7",
     "react-page-scroller": "^2.0.1-beta",
     "react-responsive-select": "^5.1.0",
-    "react-scripts": "3.3.0"
+    "react-scripts": "3.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
