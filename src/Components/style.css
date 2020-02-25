@@ -1,6 +1,6 @@
 @charset "UTF-8";
 #forsa{
-  background-image: url(/img/forsa.png);
+  background-image: url(/img/nine3.jpg);
 
   height: 100vh;
   background-repeat: no-repeat;
@@ -9,7 +9,7 @@
   padding: 80px;
 }
 #bahr{
-  background-image: url(/img/Bahr.png);
+  background-image: url(/img/bahr2.jpg);
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,7 +17,7 @@
   padding: 80px;
 }
 #ntths{
-  background-image: url(/img/ntths.jpg);
+  background-image: url(/img/nine3.jpg);
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover; 
@@ -81,7 +81,7 @@ img{
 #title{
   color:#8DC63F;
   text-align: center;
-  font-size: 110px;
+  font-size: 3.8em;
   margin-top: 0px;
   
 }
@@ -89,6 +89,7 @@ img{
   display:flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 0px;
 
 }
 
@@ -98,12 +99,12 @@ img{
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   width: 400px;
-  background-color:rgb(255, 255, 255);
+  background-color:rgba(255, 255, 255, 0.274);
   border-radius: 10px;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-left: 40px;
   margin-right: 40px;
-  padding: 40px 60px;
+  padding: 10px 80px;
   text-align: center;
 }
 
@@ -134,23 +135,23 @@ img{
  {
   -webkit-transform: scale(1.08);
           transform: scale(1.08);
-          animation: color-me-in 5s;
+          animation: color-me-in 2s;
           
 }
 @keyframes color-me-in {
   /* You could think of as "step 1" */
   0% {
-    background: rgb(255, 255, 255);
+    background:rgba(255, 255, 255, 0.363);
   }
   /* You could think of as "step 2" */
   100% {
-    background: hsl(195, 80%, 31%);
+    background: hsl(0, 0%, 100%);
   }}
 .Table-firstTable_table:hover >P
  {
   -webkit-transform: scale(1.08);
           transform: scale(1.08);
-          color: rgb(0, 0, 0);
+          color: 8DC63F;
           
 }
 .Table-firstTable_table:not(:last-of-type) {
@@ -445,9 +446,9 @@ nav:target ~ .content .contentOverlay {
 .material-icons{
   margin-right: 1900px;
   margin-top: 0px;
-  color: rgba(0, 0, 0, 0);
-  height: 54px;
-  width: 42px;
+  color: goldenrod;
+  height: 80px;
+  width: 65px;
   max-width: 320px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
