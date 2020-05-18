@@ -22,7 +22,7 @@ export default class card extends Component {
   };
   requestOne =()=> axios.get("https://beta.910ths.sa/queries/run?service=bahr&query=countOfAwardedProjects&format=json");
   requestTwo =()=> axios.get("https://beta.910ths.sa/queries/run?service=esso&query=totalNumberOfUsers&format=json");     
-  requestThree =()=> axios.get("https://beta.910ths.sa/queries/run?service=forsa&query=publishedOpportunitiesPerWeek&format=json");     
+  requestThree =()=> axios.get("https://beta.910ths.sa/queries/run?service=esso&query=numberOfActivatedUsersPerMonth&format=json");     
   requestFour =()=> axios.get("https://beta.910ths.sa/queries/run?service=forsa&query=numberAwardedOpportunitiesPerWeek&format=json");     
   requestFive =()=> axios.get("https://beta.910ths.sa/queries/run?service=bahr&query=totalProjects&format=json");     
   requestSix =()=> axios.get("https://beta.910ths.sa/queries/run?service=bahr&query=totalFreelancers&format=json");     
@@ -35,15 +35,23 @@ export default class card extends Component {
       const [AWARDED_PROJECTS_B, TOTAL_REGISTERD,TOTAL_NEW_PROJECT_F_PER_WEEK,AWARDED_PROJECTS_PERWEEK_F,TOTAL_PROJECT,TOTAL_FREELANCER,TOTAL_CLENT,TOTAL_TOJJER_U,TOTAL_N_N_STORE] = await axios.all([ this.requestOne(),this.requestTwo(),this.requestThree(),this.requestFour(),this.requestFive(),this.requestSix(),this.requestSaven(),this.requestEight(),this.requestNighn()]); 
       let Awarded_p_b =AWARDED_PROJECTS_B.data[0].count;
       let countt =TOTAL_REGISTERD.data[0].count;
-      let NewProject_F_perweek =TOTAL_NEW_PROJECT_F_PER_WEEK.data[0].count;
+      let NewProject_F_perweek = TOTAL_NEW_PROJECT_F_PER_WEEK.data;
       let Awarded_p_berweek_f =AWARDED_PROJECTS_PERWEEK_F.data[0].count;
       let project =TOTAL_PROJECT.data[0].projects;
       let Freelancer =TOTAL_FREELANCER.data[0].profs;
       let Client =TOTAL_CLENT.data[0].profs;
       let TojjerUser =TOTAL_TOJJER_U.data[0].total_users;
       let numberNewStore =TOTAL_N_N_STORE.data[0].Store_Requests;
+  //     NewProject_F_perweek =await this.state.NewProject_F_perweek.filter((item)=> {
+  //       if (!item.month) {
+  //            return}
+
+  //   return item.month.includes("3");
+  //  });
       this.setState({Awarded_p_b,countt,NewProject_F_perweek,Awarded_p_berweek_f,project,Freelancer,Client,TojjerUser,numberNewStore})
       this.setState({filtered:numberNewStore})
+     
+      
       // const responseTwo = res[1]
       // const responesThree = res[2]
     
@@ -104,7 +112,16 @@ export default class card extends Component {
             <div className="table-item-container">
               <Table  number={"0000"} tex={TEXT[2]}   />
               <Table  number={this.state.NewProject_F_perweek} tex={TEXT[3]}   />
-              {console.log(this.state.NewProject_F_perweek)}
+              {/* {console.log(this.state.NewProject_F_perweek)}
+              { this.state.NewProject_F_perweek.filter((item)=> {
+        if (!item.month) {
+             return}
+
+    return item.month.includes("3"); }),
+              this.setState({NewProject_F_perweek : this.s}) 
+   }
+   {console.log(s)} */}
+              
               <Table  number={"0000"} tex={TEXT[4]}   />
           </div>
         </div>
